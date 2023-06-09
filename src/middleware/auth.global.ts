@@ -1,4 +1,4 @@
-export default defineNuxtRouteMiddleware((to, from) => {
+export default defineNuxtRouteMiddleware((to) => {
     const { authUser } = useAuth()
 
     if (to.path !== '/' && !authUser.value) return '/'
