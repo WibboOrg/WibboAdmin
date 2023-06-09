@@ -92,7 +92,7 @@ const submitPost = async () => {
     try {
         loading.value = true
 
-        await useApiFetch('/api/v1/admin/article/' + editNew.value.id, { body: editNew.value, method: 'PATCH' })
+        await useApiFetch('/api/v1/admin/article/' + editNew.value.id, { body: editNew.value, method: 'PUT' })
 
         showMessage({
             message: "L'article a bien été mise à jour",

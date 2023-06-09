@@ -115,7 +115,7 @@ const updateItem = async (data: IRpItem) => {
     try {
         loading.value = true
 
-        await useApiFetch('/api/v1/admin/roleplayitem/' + data.id, { body: data, method: 'PATCH' })
+        await useApiFetch('/api/v1/admin/roleplayitem/' + data.id, { body: data, method: 'PUT' })
 
         showMessage({
             message: 'Mise à jour réussi',
