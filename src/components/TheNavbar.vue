@@ -133,7 +133,7 @@ const navList = ref<INav[]>([
             {
                 link: '/staff/ip',
                 text: 'IP Staff',
-                minRank: 8,
+                minRank: 11,
             },
             {
                 link: '/staff/list',
