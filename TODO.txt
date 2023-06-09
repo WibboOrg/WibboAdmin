@@ -1,0 +1,21 @@
+cms_news: liste, supprimer, modifier, crée ( tinymce )
+user: liste (+option bannir), modifier (rank/derank/bannir/crédits/motto)
+ban: liste, supprimer, crée
+word_filter_retro: liste, supprimer, crée, modifier
+
+importation: badge, image, box html, mp3
+
+user_badge: crée, supprimée, nombre de badge
+
+cms_staff_protect: liste, modifier
+cms_staff: liste, modifier
+
+navigator_public: liste, crée, supprimer, modifier
+
+log_chat: liste (+ filter par pseudo)
+log_chat_pub: liste (+ filter par pseudo)
+log_command: liste (+ filter par pseudo)
+log_flagme: liste (+ filter par pseudo)
+log_login: liste (+ filter par pseudo)
+log_shop: liste (+ filter par pseudo)
+log_staff: liste (+ filter par pseudo)
