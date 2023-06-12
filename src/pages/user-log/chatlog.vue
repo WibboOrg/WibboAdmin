@@ -4,12 +4,12 @@
             <form @submit.prevent="submitPost" class="grid grid-cols-1 gap-3 md:grid-cols-2">
                 <div class="col-span-full">
                     <label class="form-label">Pseudo</label>
-                    <BaseInput v-model="postForm.username" />
+                    <BaseInput v-model.trim="postForm.username" />
                 </div>
 
                 <div class="col-span-full">
                     <label class="form-label">Room Id</label>
-                    <BaseInput v-model="postForm.roomid" number />
+                    <BaseInput v-model.trim="postForm.roomid" number />
                 </div>
 
                 <div class="col-span-1">

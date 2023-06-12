@@ -13,7 +13,7 @@
                         </div>
                         <div class="col-span-full">
                             <label class="form-label">Code</label>
-                            <BaseInput v-model="postForm.code" />
+                            <BaseInput v-model.trim="postForm.code" />
                         </div>
                         <div class="col-span-1">
                             <label class="form-label">Titre</label>

@@ -26,7 +26,7 @@
                                     <div class="w-full px-4 py-2">{{ data.id }}</div>
                                 </BaseTableColunm>
                                 <BaseTableColunm>{{ data.username }}</BaseTableColunm>
-                                <BaseTableColunm><BaseInput v-model="data.ip" text-to-edit /></BaseTableColunm>
+                                <BaseTableColunm><BaseInput v-model.trim="data.ip" text-to-edit /></BaseTableColunm>
                                 <BaseTableColunm><BaseButton primary :loading="loading" little @click.native="updateStaff(data)">Mettre à jour</BaseButton></BaseTableColunm>
                             </BaseTableBody>
                         </template>

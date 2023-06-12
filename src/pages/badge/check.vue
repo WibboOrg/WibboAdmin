@@ -8,7 +8,7 @@
                     <form @submit.prevent="submitPost" class="grid grid-cols-1 gap-3">
                         <div class="col-span-1">
                             <label class="form-label">Badge</label>
-                            <BaseInput v-model="postForm.code" />
+                            <BaseInput v-model.trim="postForm.code" />
                         </div>
 
                         <div class="col-span-1">

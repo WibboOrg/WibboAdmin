@@ -33,7 +33,7 @@
                         <template #body>
                             <BaseTableBody v-for="data in rowsSearch" :key="data.id">
                                 <BaseTableColunm>{{ data.id }}</BaseTableColunm>
-                                <BaseTableColunm><img :src="runtimeConfig.urlCdn + `items/${data.name}.png`" /></BaseTableColunm>
+                                <BaseTableColunm><img :src="runtimeConfig.public.urlCdn + `items/${data.name}.png`" /></BaseTableColunm>
                                 <BaseTableColunm><BaseInput v-model="data.desc" text-to-edit /></BaseTableColunm>
                                 <BaseTableColunm><BaseInput v-model="data.price" text-to-edit /></BaseTableColunm>
                                 <BaseTableColunm>

@@ -12,8 +12,8 @@
                         </div>
 
                         <div class="col-span-1">
-                            <label class="form-label">Nom du fichier</label>
-                            <BaseInput v-model="postForm.name" />
+                            <label class="form-label">Nom du fichier (PNG)</label>
+                            <BaseInput v-model.trim="postForm.name" />
                         </div>
 
                         <div class="col-span-1">

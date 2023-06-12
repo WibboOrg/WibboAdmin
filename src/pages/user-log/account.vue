@@ -4,7 +4,7 @@
             <form @submit.prevent="submitPost" class="grid grid-cols-1 gap-3">
                 <div class="col-span-1">
                     <label class="form-label">Pseudo ou Adresse IP</label>
-                    <BaseInput v-model="postForm.search" />
+                    <BaseInput v-model.trim="postForm.search" />
                 </div>
 
                 <div class="col-span-1">

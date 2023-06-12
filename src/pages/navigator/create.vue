@@ -12,7 +12,7 @@
                         </div>
                         <div class="col-span-1">
                             <label class="form-label">Id de l'appartement</label>
-                            <BaseInput v-model="postForm.roomid" />
+                            <BaseInput v-model.trim="postForm.roomid" />
                         </div>
 
                         <div class="col-span-1">

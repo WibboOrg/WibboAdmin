@@ -8,12 +8,12 @@
                     <form @submit.prevent="submitPost" class="grid grid-cols-1 gap-3 md:grid-cols-2">
                         <div class="col-span-1">
                             <label class="form-label">Pseudo</label>
-                            <BaseInput v-model="postForm.username" />
+                            <BaseInput v-model.trim="postForm.username" />
                         </div>
 
                         <div class="col-span-1">
                             <label class="form-label">Code du badge</label>
-                            <BaseInput v-model="postForm.code" />
+                            <BaseInput v-model.trim="postForm.code" />
                         </div>
 
                         <div class="col-span-full">

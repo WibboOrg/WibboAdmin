@@ -31,7 +31,7 @@
                                     <div class="w-full px-4 py-2">{{ data.room_id }}</div>
                                 </BaseTableColunm>
                                 <BaseTableColunm>
-                                    <a :href="runtimeConfig.urlAssets + 'c_images/' + data.image_url" target="_blank">{{ data.image_url }}</a>
+                                    <a :href="runtimeConfig.public.urlAssets + 'c_images/' + data.image_url" target="_blank">{{ data.image_url }}</a>
                                 </BaseTableColunm>
                                 <BaseTableColunm>{{ data.category_type }}</BaseTableColunm>
                                 <BaseTableColunm><BaseButton primary :loading="loading" little @click.native="deleteNav(data.room_id)">Supprimer</BaseButton></BaseTableColunm>
