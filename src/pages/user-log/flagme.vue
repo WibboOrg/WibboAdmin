@@ -59,7 +59,7 @@ const submitPost = async () => {
 
         logs.value = response.logs
 
-        if (!logs.value.length) {
+        if (!logs.value) {
             showMessage({
                 message: 'Aucune log disponible pour ' + postForm.value.username,
             })
