@@ -21,15 +21,15 @@
                     <BaseTable>
                         <template #head>
                             <BaseTableHead>#</BaseTableHead>
-                            <BaseTableHead>Prix</BaseTableHead>
                             <BaseTableHead>Info</BaseTableHead>
+                            <BaseTableHead>Prix</BaseTableHead>
                             <BaseTableHead>Date</BaseTableHead>
                         </template>
                         <template #body>
                             <BaseTableBody v-for="(data, index) in achat" :key="index">
                                 <BaseTableColunm>{{ index + 1 }}</BaseTableColunm>
-                                <BaseTableColunm>{{ data.prix }}</BaseTableColunm>
-                                <BaseTableColunm>{{ data.achat }}</BaseTableColunm>
+                                <BaseTableColunm>{{ data.content }}</BaseTableColunm>
+                                <BaseTableColunm>{{ data.price }}</BaseTableColunm>
                                 <BaseTableColunm>{{ filters.formatDateComplet(data.date) }}</BaseTableColunm>
                             </BaseTableBody>
                         </template>
@@ -74,8 +74,8 @@ const submitPost = async () => {
 }
 
 interface IBoutiqueLog {
-    prix: number
-    achat: string
+    price: number
+    content: string
     date: number
 }
 </script>

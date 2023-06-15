@@ -23,13 +23,15 @@
                             <BaseTableHead>#</BaseTableHead>
                             <BaseTableHead>Nom</BaseTableHead>
                             <BaseTableHead>Info</BaseTableHead>
+                            <BaseTableHead>Prix</BaseTableHead>
                             <BaseTableHead>Date</BaseTableHead>
                         </template>
                         <template #body>
                             <BaseTableBody v-for="(data, index) in rowsSearch" :key="index">
                                 <BaseTableColunm>{{ index + 1 }}</BaseTableColunm>
                                 <BaseTableColunm>{{ data.username }}</BaseTableColunm>
-                                <BaseTableColunm>{{ data.achat }}</BaseTableColunm>
+                                <BaseTableColunm>{{ data.content }}</BaseTableColunm>
+                                <BaseTableColunm>{{ data.price }}</BaseTableColunm>
                                 <BaseTableColunm>{{ filters.formatDateComplet(data.date) }}</BaseTableColunm>
                             </BaseTableBody>
                         </template>
@@ -78,8 +80,8 @@ const rowsSearch = computed(() => rows.value.filter((x) => Object.values(x).some
 
 interface IBoutiqueLog {
     username: string
-    prix: number
-    achat: string
+    price: number
+    content: string
     date: number
 }
 </script>
