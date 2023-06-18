@@ -30,18 +30,14 @@
                             <label class="form-label">Article</label>
                             <Editor
                                 v-model="postForm.content"
-                                api-key="ekl3p5i26efg7nz3rtnyh3oqj1hx9pfuile50yz68bum3wy7"
+                                :api-key="runtimeConfig.public.tinymceApi"
                                 :init="{
                                     height: 500,
                                     menubar: true,
-                                    plugins: [
-                                        'print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media \
-										template codesample table charmap hr pagebreak nonbreaking anchor insertdatetime advlist lists wordcount \
-										imagetools textpattern',
-                                    ],
-                                    toolbar:
-                                        'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify \
-										| numlist bullist outdent indent | removeformat',
+                                    plugins: ['advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen', 'insertdatetime', 'media', 'table', 'help', 'wordcount'],
+                                    toolbar: 'undo redo | blocks | ' + 'bold italic backcolor | alignleft aligncenter ' + 'alignright alignjustify | bullist numlist outdent indent | ' + 'removeformat | help',
+                                    skin: 'oxide-dark',
+                                    content_css: 'dark',
                                     language: 'fr_FR',
                                 }"
                             />
@@ -70,6 +66,7 @@
 <script lang="ts" setup>
 import Editor from '@tinymce/tinymce-vue'
 
+const runtimeConfig = useRuntimeConfig()
 const { showMessage } = useNotification()
 
 const loading = ref(false)

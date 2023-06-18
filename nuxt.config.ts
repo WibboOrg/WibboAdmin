@@ -10,6 +10,7 @@ export default defineNuxtConfig({
             apiBase: process.env.NUXT_PUBLIC_API_BASE,
             urlAssets: process.env.NUXT_PUBLIC_URL_ASSETS || '',
             urlCdn: process.env.NUXT_PUBLIC_URL_CDN || '',
+            tinymceApi: process.env.NUXT_PUBLIC_TINYMCE_API || '',
         },
     },
 
