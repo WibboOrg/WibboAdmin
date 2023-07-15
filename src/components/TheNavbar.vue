@@ -104,6 +104,11 @@ const navList = ref<INav[]>([
                 text: 'MP3',
                 minRank: 8,
             },
+            {
+                link: '/upload/page',
+                text: 'Page HTML',
+                minRank: 8,
+            },
         ],
         open: defaultNavClose,
     },
