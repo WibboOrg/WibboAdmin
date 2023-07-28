@@ -26,7 +26,7 @@
                                 <BaseTableColunm>{{ data.id }}</BaseTableColunm>
                                 <BaseTableColunm>{{ data.username }}</BaseTableColunm>
                                 <BaseTableColunm>{{ data.ipcountry }}</BaseTableColunm>
-                                <BaseTableColunm>{{ data.online === '1' ? 'En ligne' : 'Hors ligne' }}</BaseTableColunm>
+                                <BaseTableColunm>{{ data.online === 1 ? 'En ligne' : 'Hors ligne' }}</BaseTableColunm>
                                 <BaseTableColunm><BaseButton primary little @click.native="banUser(data)">Bannir IP + compte</BaseButton></BaseTableColunm>
                             </BaseTableBody>
                         </template>
@@ -88,7 +88,7 @@ interface IUser {
     id: number
     username: string
     rank: number
-    online: string
+    online: number
     ipcountry: string
 }
 </script>
