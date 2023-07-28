@@ -11,6 +11,7 @@
     "lint:js": "eslint src --ext .ts,.vue --fix"
   },
   "devDependencies": {
+    "@nuxt/devtools": "^0.7.1",
     "@nuxtjs/tailwindcss": "^6.3.1",
     "@types/node": "^18.15.6",
     "@typescript-eslint/eslint-plugin": "^5.48.1",
