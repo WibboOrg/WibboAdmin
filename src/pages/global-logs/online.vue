@@ -9,7 +9,7 @@
 
         <div class="col-span-1">
             <BaseCard>
-                <template #title>Statistiques des connectées</template>
+                <template #title>Statistiques des connectés</template>
 
                 <template #body>
                     <LineChart :chart-data="datacollection" :options="{ responsive: true, maintainAspectRatio: false }" />
@@ -65,7 +65,7 @@ const chartData = (stats: IStat[]) => {
                 data: [...stats.map((x) => x.room)],
             },
             {
-                label: 'Connecter',
+                label: 'Connectés',
                 backgroundColor: '#0452c6',
                 pointBackgroundColor: '#002c6d',
                 borderColor: '#002c6d',
