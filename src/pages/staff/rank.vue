@@ -38,6 +38,7 @@ const rankList = ref({
     'animateur-casino': 'Animation Casino',
     modo: 'Modération',
     graphiste: 'Créations artistiques et visuelles',
+    helper: 'Assistance',
     arch: 'Créations architecturales',
     wired: 'Créations technologiques',
     croupier: 'Casino',
