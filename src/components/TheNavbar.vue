@@ -205,7 +205,7 @@ const navList = ref<INav[]>([
             },
             {
                 link: '/user-log/ban',
-                text: 'Bannisements',
+                text: 'Bannissements',
                 minRank: 6,
             },
             {
@@ -238,7 +238,7 @@ const navList = ref<INav[]>([
             },
             {
                 link: '/global-logs/ban',
-                text: 'Bannisements',
+                text: 'Bannissements',
             },
             {
                 link: '/global-logs/online',
