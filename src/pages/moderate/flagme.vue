@@ -2,7 +2,7 @@
     <div class="grid grid-cols-1 gap-4">
         <div class="col-span-1">
             <BaseCard>
-                <template #title>Libérer un pseudonyme</template>
+                <template #title>Délivrer un pseudonyme</template>
 
                 <template #body>
                     <form @submit.prevent="submitPost" class="grid grid-cols-1 gap-3">
@@ -36,7 +36,7 @@ const submitPost = async () => {
         await useApiFetch('/api/v1/admin/flagme', { method: 'POST', body: postForm.value })
 
         showMessage({
-            message: 'Le pseudonyme a bien été délivrer',
+            message: 'Le pseudonyme a été délivré',
             success: true,
         })
 

@@ -51,7 +51,7 @@ const navList = ref<INav[]>([
         links: [
             {
                 link: '/article/create',
-                text: 'Crée article',
+                text: 'Crée un article',
                 minRank: 8,
             },
             {
@@ -80,7 +80,7 @@ const navList = ref<INav[]>([
             },
             {
                 link: '/moderate/flagme',
-                text: 'Libérer pseudo',
+                text: 'Délivrer un pseudonyme',
                 minRank: 11,
             },
         ],
@@ -127,7 +127,7 @@ const navList = ref<INav[]>([
             },
             {
                 link: '/badge/check',
-                text: 'Nombre',
+                text: 'Quota par joueur',
             },
         ],
         open: defaultNavClose,
