@@ -52,6 +52,7 @@ const banList = ref({
     '24': '1 jour',
     '48': '2 jours',
     '168': '1 semaine',
+    '730': '1mois',
     '100008': 'Définitivement',
 })
 
