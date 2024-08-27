@@ -52,7 +52,7 @@ const navList = ref<INav[]>([
             {
                 link: '/article/create',
                 text: 'Crée un article',
-                minRank: 8,
+                minRank: 7,
             },
             {
                 link: '/article/list',
@@ -229,7 +229,7 @@ const navList = ref<INav[]>([
             {
                 link: '/global-logs/command',
                 text: 'Commandes',
-                minRank: 11,
+                minRank: 8,
             },
             {
                 link: '/global-logs/shop',

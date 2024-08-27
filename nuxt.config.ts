@@ -7,7 +7,6 @@ export default defineNuxtConfig({
             hashMode: true
         }
     },
-    payloadExtraction: false,
     srcDir: 'src/',
 
     runtimeConfig: {
