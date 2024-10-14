@@ -5,14 +5,7 @@
             <a class="px-2 border-r border-white cursor-pointer" @click.prevent="goTo(pageId - 1)">‹</a>
             <div class="px-2 border-r border-white cursor-pointer" v-show="pageId > 5">…</div>
 
-            <a
-                class="px-2 border-r border-white cursor-pointer"
-                @click="goTo(pageId - index)"
-                v-show="pageId - index > 0 && pageId - index != pageId"
-                v-for="index in [...Array(5).keys()].slice().reverse()"
-                :key="index"
-                >{{ pageId - index }}</a
-            >
+            <a class="px-2 border-r border-white cursor-pointer" @click="goTo(pageId - index)" v-show="pageId - index > 0 && pageId - index != pageId" v-for="index in [...Array(5).keys()].slice().reverse()" :key="index">{{ pageId - index }}</a>
             <a class="px-2 font-bold border-r border-white cursor-pointer" @click.prevent="goTo(pageId)">{{ pageId }}</a>
             <a class="px-2 border-r border-white cursor-pointer" @click="goTo(pageId + index)" v-show="pageId + index <= pageCount" v-for="index in 5" :key="index">{{ pageId + index }}</a>
 

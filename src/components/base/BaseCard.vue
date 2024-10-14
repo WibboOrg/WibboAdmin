@@ -1,12 +1,8 @@
 <template>
-    <div class="relative overflow-hidden break-words rounded shadow shadow-gray-600" :class="{ 'bg-gray-800': !hiddenBackground }">
-        <h4 class="my-2 text-center" v-if="hasTitleSlot">
-            <span class="font-bold">
-                <slot name="title"></slot>
-            </span>
-        </h4>
+    <div class="card bg-base-100 card-bordered" :class="{ '!bg-transparent': hiddenBackground }">
+        <div class="overflow-auto card-body">
+            <h4 class="card-title" v-if="hasTitleSlot"><slot name="title"></slot></h4>
 
-        <div class="px-4 py-2 overflow-auto">
             <slot name="body"></slot>
         </div>
     </div>

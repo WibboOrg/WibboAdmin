@@ -1,6 +1,6 @@
 <template>
-    <table class="w-full overflow-auto text-sm text-left text-gray-400 table-auto">
-        <thead class="text-xs text-gray-400 uppercase bg-gray-700">
+    <table class="table table-pin-rows table-pin-cols">
+        <thead>
             <tr>
                 <slot name="head"></slot>
             </tr>

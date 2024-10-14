@@ -1,19 +1,20 @@
-const isSuccess = ref<boolean>(false)
-const timeoutId = ref<number>(0)
-const notifications = ref<string[]>([])
+import type { NotificationAlert } from "~/types"
+
+const notifications = ref<NotificationAlert[]>([])
+
+let timeoutId = 0
+let notificationId = 0
 
 export const useNotification = () => {
-    const showMessage = ({ message = '', success = false }) => {
-        if (isSuccess.value !== success) isSuccess.value = success
+  const showMessage = ({ message = '', success = false }) => {
+    notifications.value.push({ id: notificationId++, message, success })
 
-        notifications.value.push(message)
+    if (notifications.value.length > 5) notifications.value.shift()
 
-        if (notifications.value.length > 3) notifications.value.shift()
+    if (timeoutId) clearTimeout(timeoutId)
 
-        if (timeoutId.value) clearTimeout(timeoutId.value)
+    timeoutId = window.setTimeout(() => (notifications.value = []), 30_000)
+  }
 
-        timeoutId.value = window.setTimeout(() => (notifications.value = []), 10_000)
-    }
-
-    return { notifications, isSuccess, showMessage }
+  return { notifications, showMessage }
 }

@@ -78,7 +78,7 @@ const loading = ref(false)
 const postForm = ref({ name: '', desc: '', price: '0', value: '', allowstack: '0', type: 'none', category: 'QUETE' })
 const file = ref<File | null>(null)
 
-const handleFileUpload = (fileUpload: File) => (file.value = fileUpload)
+const handleFileUpload = (fileUploads: FileList) => (file.value = fileUploads[0])
 
 const submitPost = async () => {
     if (loading.value || !file.value) return

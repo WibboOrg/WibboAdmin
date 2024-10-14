@@ -4,17 +4,10 @@
         <span v-else>{{ valueUpdated }}</span>
     </div>
     <div v-else>
-        <input
-            class="w-full px-4 py-2 whitespace-pre-wrap bg-gray-600 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-            :type="type"
-            :placeholder="placeholder"
-            :value="modelValue"
-            @input="updateValue($event.target as HTMLInputElement)"
-            v-if="!textToEdit"
-        />
+        <input class="w-full input input-bordered" :type="type" :placeholder="placeholder" :value="modelValue" @input="updateValue($event.target as HTMLInputElement)" v-if="!textToEdit" />
         <div
             v-else
-            class="w-full px-4 py-2 whitespace-pre-wrap bg-gray-600 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+            class="w-full input input-bordered"
             :class="{ 'text-center': center }"
             @keyup.enter="props.number ? onExit() : null"
             @blur="onExit"

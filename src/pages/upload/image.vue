@@ -1,6 +1,16 @@
 <template>
     <div class="grid grid-cols-1 gap-4">
         <div class="col-span-1">
+            <BaseCard v-if="url" class="mb-2">
+                <template #title>Url de l'image</template>
+
+                <template #body>
+                    <div class="flex flex-col">
+                        <BaseInput class="w-full" center v-model="url" />
+                    </div>
+                </template>
+            </BaseCard>
+
             <BaseCard>
                 <template #title>Importer une image</template>
 
@@ -26,8 +36,9 @@ const { showMessage } = useNotification()
 
 const loading = ref(false)
 const file = ref<File | null>(null)
+const url = ref('')
 
-const handleFileUpload = (fileUpload: File) => (file.value = fileUpload)
+const handleFileUpload = (fileUploads: FileList) => (file.value = fileUploads[0])
 
 const submitPost = async () => {
     if (loading.value || !file.value) return
@@ -40,10 +51,10 @@ const submitPost = async () => {
 
         const response = await useApiFetch<{ url: string }>('/api/v1/admin/upload-image', { body: formData, method: 'POST', headers: { 'Content-Type': 'multipart/form-data' } })
 
-        const url = response.url
+        url.value = response.url
 
         showMessage({
-            message: 'Votre image a été ajouté : ' + url,
+            message: 'Votre image a été ajouté !',
             success: true,
         })
     } catch (e) {

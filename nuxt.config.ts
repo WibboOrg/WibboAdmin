@@ -1,11 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
+    devServer: {
+        port: 3002,
+    },
     ssr: false,
     router: {
         options: {
-            hashMode: true
-        }
+            hashMode: true,
+        },
     },
     srcDir: 'src/',
 

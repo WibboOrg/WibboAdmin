@@ -27,7 +27,7 @@ const { showMessage } = useNotification()
 const loading = ref(false)
 const file = ref<File | null>(null)
 
-const handleFileUpload = (fileUpload: File) => (file.value = fileUpload)
+const handleFileUpload = (fileUploads: FileList) => (file.value = fileUploads[0])
 
 const submitPost = async () => {
     if (loading.value || !file.value) return

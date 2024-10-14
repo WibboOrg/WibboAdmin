@@ -44,7 +44,7 @@ const categoryList = {
     featured_run: 'Runs',
 }
 
-const handleFileUpload = (fileUpload: File) => (file.value = fileUpload)
+const handleFileUpload = (fileUploads: FileList) => (file.value = fileUploads[0])
 
 const submitPost = async () => {
     if (loading.value || file.value == null) return
