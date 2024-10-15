@@ -43,8 +43,9 @@ const submitPost = async () => {
         const url = response.url
 
         showMessage({
-            message: 'Votre page HTML a été ajouté : ' + url,
+            message: 'Votre page HTML a été ajouté !',
             success: true,
+            copy: url,
         })
     } catch (e) {
         console.error(e)

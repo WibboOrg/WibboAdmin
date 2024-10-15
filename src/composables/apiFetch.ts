@@ -1,7 +1,7 @@
 const langs: Record<string, string> = {
     'alert-server-error': 'Une erreur serveur est apparu, réessayer plus tard',
-    error: "Une erreur s'est produite. Merci d'essayer plus tard",
-    permission: 'Permissions insuffisantes',
+    'error': "Une erreur s'est produite. Merci d'essayer plus tard",
+    'permission': 'Permissions insuffisantes',
     'login.fail': 'Vos identifiants sont incorrects',
     'login.ban': 'Tu as été exclu. La raison de cette exclusion est la suivante " {0} " Merci de relire la nos conditions d\'utilisation. La sanction prendra fin le {1} à {2}',
     'login.staff': 'Votre IP ne correspond pas avec les données de notre database, merci de procéder à un changement de cette sécurité : {0}',
@@ -52,6 +52,7 @@ export const useApiFetch = <T>(path: string, opts = {}) => {
 
                 showMessage({
                     message: FormatString(langs[key], ...params),
+                    copy: key === 'login.staff' ? params[0] : undefined
                 })
             }
         },

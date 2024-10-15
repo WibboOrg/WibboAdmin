@@ -58,7 +58,7 @@ const submitPost = async () => {
         await useApiFetch('/api/v1/admin/upload-badge', { body: formData, method: 'POST', headers: { 'Content-Type': 'multipart/form-data' } })
 
         showMessage({
-            message: 'Votre badge a été ajouté ! ',
+            message: 'Votre badge a été ajouté !',
             success: true,
         })
 

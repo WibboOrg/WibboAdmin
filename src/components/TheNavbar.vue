@@ -1,5 +1,5 @@
 <template>
-    <nav class="absolute top-0 bottom-0 left-0 z-10 flex flex-col h-full gap-1 p-2 bg-gray-800 shadow shadow-gray-600 w-[200px] overflow-y-auto" v-show="isOpen" :key="isOpen ? 'yes' : 'no'">
+    <nav class="absolute top-0 bottom-0 left-0 z-10 flex flex-col h-full gap-1 p-2 bg-base-100 shadow shadow-gray-600 w-[200px] overflow-y-auto" v-show="isOpen" :key="isOpen ? 'yes' : 'no'">
         <div class="flex justify-between mb-2">
             <span class="font-bold">Admin</span>
 

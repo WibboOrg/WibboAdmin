@@ -41,7 +41,7 @@ const submitPost = async () => {
         await useApiFetch('/api/v1/admin/upload-mp3', { body: formData, method: 'POST', headers: { 'Content-Type': 'multipart/form-data' } })
 
         showMessage({
-            message: 'Votre fichier a été ajouté ! ',
+            message: 'Votre fichier a été ajouté !',
             success: true,
         })
     } catch (e) {

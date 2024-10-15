@@ -6,8 +6,8 @@ let timeoutId = 0
 let notificationId = 0
 
 export const useNotification = () => {
-  const showMessage = ({ message = '', success = false }) => {
-    notifications.value.push({ id: notificationId++, message, success })
+  const showMessage = ({ message = '', success = false, copy = undefined }: Partial<NotificationAlert>) => {
+    notifications.value.push({ id: notificationId++, message, success, copy })
 
     if (notifications.value.length > 5) notifications.value.shift()
 

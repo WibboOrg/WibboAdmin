@@ -17,5 +17,22 @@ export default {
             '2xl': '1400px',
         },
     },
+    daisyui: {
+        themes: [
+            {
+                mytheme: {
+                    primary: '#111827',
+                    secondary: '#374151',
+                    accent: '#00ffff',
+                    neutral: '#4b5563',
+                    'base-100': '#1d232a',
+                    info: '#1e3a8a',
+                    success: '#166534',
+                    warning: '#a16207',
+                    error: '#b91c1c',
+                },
+            },
+        ],
+    },
     plugins: [daisyui],
 } satisfies Config
