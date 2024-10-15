@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div data-theme="dark">
         <NuxtLoadingIndicator />
         <NuxtLayout>
             <NuxtPage />
